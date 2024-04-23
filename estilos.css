@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,500&display=swap');  /* sirve para agregar el tipo de fuente a el texto de la pagina*/
+
+*{
+    margin:0 ;                          /*Sirve para darle un formato general a toda la pagina*/
+    padding: 0;
+    box-sizing: border-box;
+}
+body{                     /*le da el estilo de fuente al texto dentro del cuerpo*/
+    font-family: "Poppins", sans-serif;
+}
+.container{             /*lo usamos para darle una anchura de 90% en un maximo de 1200px*/
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.nav{               /*para nav procedimos a agregar un color azul oscuro y al texto blanco*/
+    background-color: #143d64;
+    height: var(--height-nav);
+    color: #fff;
+}
+.nav_container{                /*para  nav_container le agregamos una altura de 100% con el contenido justificado*/
+    height: 100%;
+    display: flex;justify-content: space-between;
+    align-items: center;
+}
+.nav_link{                 /*para nav_link con un color blanco quitando la decoracion de los links*/ 
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1em;
+}
+.hero_main{                     /*para hero_main le agregamos un alineado de los items y un minimo de altura de 600px*/
+    display: flex;
+    height: calc(100vh-var(--height-nav));
+    align-items: center;
+    min-height: 600px;
+}
+.hero_img{             /* sirve para darle una anchura de 100% en un maximo de 600px y para proporcionarle posicion a la imagen*/ 
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+.hero_title{              /*sirve para darle tamaño al titulo de 3rem*/ 
+    font-size: 3rem;
+}
+.hero_paragraph{                 /*este sirve para darle altura y anchura de la fuente dentro de la clase*/
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.cta{                         /* sirve para darle estilo al link con un color de texto blanco, color de fondo morado,y un padding de 15-30px*/
+    background-color: #6c63ff;
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 1.5em;
+    color: azure;
+    text-decoration: none;
+    border-radius: 6px;
+}
+@media screen and (max-width: 900px) {:root{        /* sirve para hacer la pagina apta para dispositivos moviles en un maximo de 900px*/
+ --height-nav:100px   
+}
+.nav_container{                         /*para nav_container justificamos su contenido*/
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.hero_main{                         /*para el hero_main le agregamos un padding de 40px*/
+    flex-direction: column;
+    padding: 40px 0;
+}
+.figure_picture{                      /*este sirve para agregarle estilo a la imagen dentro de los dispositivos moviles*/
+    order: -1;
+    max-width: 380px;
+}
+.hero_texts{                         /*le agregamos diseño al texto dentro de los celulares*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.hero_title{                        /*para hero_title le agregamos un tamaño de 2.5rem*/
+    font-size: 2.5rem;
+}
+.hero_paragraph{        /*en hero_paragraph le agregamos un tamaño de 1rem*/                  
+    font-size: 1rem; 
+}
+.cta{                       /*para cta se agrego un margin automatico*/
+    margin: auto;
+}
+}
